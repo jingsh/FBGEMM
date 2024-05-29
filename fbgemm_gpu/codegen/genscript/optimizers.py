@@ -40,7 +40,7 @@ def dense() -> Dict[str, Any]:
         ),
         "has_cpu_support": True,
         "has_gpu_support": True,
-        "has_vbe_support": False,
+        "has_vbe_support": True,
         "has_global_weight_decay_support": False,
         "has_ssd_support": False,
     }
@@ -1166,7 +1166,7 @@ def none_optimizer() -> Dict[str, Any]:
         "args": OptimizerArgsSet.create(
             [
                 OptimItem(ArgType.INT, "total_hash_size"),
-                OptimItem(ArgType.INT, "total_unique_indices"),
+                OptimItem(ArgType.SYM_INT, "total_unique_indices"),
             ]
         ),
         # Generate only GPU code
